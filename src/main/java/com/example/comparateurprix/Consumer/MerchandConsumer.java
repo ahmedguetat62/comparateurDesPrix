@@ -26,7 +26,13 @@ public class MerchandConsumer {
                 String name = data[1];
                 String url = data[2];
                 String image_url = data[3];
-                String price = data[4];
+                float price = 0 ;
+                try{
+
+                 price = Float.parseFloat(data[4]);
+                }catch (NumberFormatException e){
+                    e.printStackTrace();
+                }
                 String currency = data[5];
                 String brand = data[6];
                 String category_id = data[7];
